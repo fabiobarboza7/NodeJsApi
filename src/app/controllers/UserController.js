@@ -11,6 +11,10 @@ class UserController {
     const { email, password_hash } = await User.create(req.body);
     return res.json({ email, password_hash });
   }
+
+  async update(req, res) {
+    return res.json({ ok: true });
+  }
 }
 
 export default new UserController();
